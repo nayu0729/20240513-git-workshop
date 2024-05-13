@@ -9,21 +9,21 @@ var freezed; // is current shape settled on the board?
 var shapes = [
     [ 1, 1, 1, 1 ,1,1,1,1], // 1,1,1,1,
     [ 1, 1, 1, 1, // 1,1,1,0,1
-      1 ,0,1,0],
-    [ 1, 1, 1, 0,
-      0, 0, 1 ],
-    [ 1, 1, 0, 0,
-      1, 1 ],
-    [ 1, 1, 0, 0,
-      0, 1, 1 ],
+      1 ,0, 1, 0],
+    [ 1, 0, 1, 0, //1110011
+      1, 0, 1, 1 ],
+    [ 1, 0, 1, 0, //110011
+      1, 1, 1, 1 ],
+    [ 1, 0, 0, 1, //1100011
+      1, 1, 1 ,1],
     [ 0, 1, 1, 0,
-      1, 1 ],
+      1, 1 ,1,1],
     [ 0, 1, 0, 0,
-      1, 1, 1 ]
+      1, 1, 1 ,1]
 ];
-var colors = [
-    'cyan', 'orange', 'blue', 'yellow', 'red', 'lime', 'purple'
-];
+var colors = ['while'];
+    //'cyan', 'orange', 'blue', 'yellow', 'red', 'lime', 'purple'
+//];
 
 // creates a new 4x4 shape in global variable 'current'
 // 4x4 so as to cover the size when the shape is rotated
@@ -199,7 +199,7 @@ function newGame() {
     init();
     newShape();
     lose = false;
-    interval = setInterval( tick, 400 );
+    interval = setInterval( tick, 1000 );
 }
 
 function clearAllIntervals(){
